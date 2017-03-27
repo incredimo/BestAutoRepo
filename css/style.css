@@ -744,3 +744,12 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+
+.map{
+   background-color: whitesmoke;
+   height: 100%;
+   width: 100%;
+   min-width: 100px;
+   min-height: 100px;
+   
+}
