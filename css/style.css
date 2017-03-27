@@ -749,8 +749,8 @@ body {
    background-color: whitesmoke;
    height: 100%;
    width: 100%;
-   min-width: 100px;
-   min-height: 300px;
-   border-radius: 10px;
+   min-width: 300px;;
+   min-height: 400px;
+   
 
 }
