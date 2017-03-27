@@ -440,7 +440,7 @@
                             <div class="col-md-6">
                                 <div class="map"></div>
 
-                             
+
 
                             </div>
                             <div class="clearfix"></div>
@@ -608,10 +608,10 @@
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
                                 <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by
-                                    <a
-                                        href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively
-                                        for Best PSD Freebies. This template has a great portfolio, timeline, and meet your
-                                        team sections that can be easily modified to fit your needs.</p>
+                                    <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern
+                                    and clean one page web template that was made exclusively for Best PSD Freebies. This
+                                    template has a great portfolio, timeline, and meet your team sections that can be easily
+                                    modified to fit your needs.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -705,22 +705,16 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYtmw2EtQrptv-GNlT8364wRM6qmhFR7Q&callback=initMap">
     </script>
 
-       <script>
-                                    function initMap() {
-                                        var uluru = {
-                                            lat: -25.363,
-                                            lng: 131.044
-                                        };
-                                        var map = new google.maps.Map(document.getElementById('map'), {
-                                            zoom: 4,
-                                            center: uluru
-                                        });
-                                        var marker = new google.maps.Marker({
-                                            position: uluru,
-                                            map: map
-                                        });
-                                    }
-                                </script>
+    <script>
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                        center: {
+                            lat: -34.397,
+                            lng: 150.644
+                        },
+                        zoom: 8
+                    }
+    </script>
 
 </body>
 
