@@ -58,9 +58,9 @@ $mail->Port = 587;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-$mail->Username = "aghilonline4u@gmail.com";
+$mail->Username = "bestautocustomer@gmail.com";
 //Password to use for SMTP authentication
-$mail->Password = "dadsmagaav4u";
+$mail->Password = "dadsmagaav";
 //Set who the message is to be sent from
 $mail->setFrom('from@example.com', 'First Last');
 //Set an alternative reply-to address
