@@ -1,5 +1,18 @@
 var map;
 
+Bname = document.getElementById('BrandName');
+Cname = document.getElementById('CarName');
+
+Bname.addEventListener('change', UpdateCarNames);
+
+function UpdateCarNames() {
+    Cname.value="Accord"
+
+
+    var option = document.createElement('option');
+ option.value = "City";
+Cname.list.appendChild(option);
+}
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
