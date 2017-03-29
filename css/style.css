@@ -759,3 +759,16 @@ body {
 .team-member {
   padding: 30px;
 }
+
+.greyimg {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter:opacity(.5);
+    transition: all 1s ease-out;
+}
+
+.greyimg:hover{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0);
+    filter:opacity(1);
+}
