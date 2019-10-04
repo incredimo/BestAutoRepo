@@ -100,9 +100,9 @@ fieldset[disabled] .btn-primary.active {
   background-color: white;
 }
 .btn-xl {
-  color: white;
-  background-color: #fed136;
-  border-color: #fed136;
+  color: black;
+  background-color: #eccb0c;
+  border-color: #eccb0c;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -151,7 +151,7 @@ fieldset[disabled] .btn-xl.active {
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
-  color: #fed136;
+  color: #ffc800;
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-custom .navbar-brand:hover,
@@ -159,6 +159,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand.active {
   color: #fec503;
+
 }
 .navbar-custom .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
@@ -189,12 +190,12 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-custom .navbar-nav > .active > a {
   border-radius: 0;
-  color: white;
+  color: black;
   background-color: #fed136;
 }
 .navbar-custom .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus {
-  color: white;
+  color: black;
   background-color: #fec503;
 }
 @media (min-width: 768px) {
@@ -273,7 +274,7 @@ header .intro-text .intro-heading {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 75px;
-    line-height: 75px;
+    line-height: 5rem;
     margin-bottom: 50px;
   }
 }
@@ -378,7 +379,7 @@ section h3.section-subheading {
   position: absolute;
   content: "";
   width: 2px;
-  background-color: #f1f1f1;
+  background-color: grey;
   left: 40px;
   margin-left: -1.5px;
 }
@@ -422,9 +423,9 @@ section h3.section-subheading {
   position: absolute;
   z-index: 100;
   background-color: #fed136;
-  color: white;
+  color: rgb(26, 26, 26);
   border-radius: 100%;
-  border: 7px solid #f1f1f1;
+  border: 2px solid grey;
   text-align: center;
 }
 .timeline > li .timeline-image h4 {
