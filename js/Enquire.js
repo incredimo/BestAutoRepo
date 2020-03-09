@@ -18,7 +18,7 @@ $(function() {
       var CName = $("input#carname").val();
       var message = $("textarea#partname").val();
       var firstName = name; // For Success/Failure Message
-      // Check for white space in name for Success/Fail message
+      // Check for white space in name for Success/Fail message i
       if (firstName.indexOf(" ") >= 0) {
         firstName = name
           .split(" ")
