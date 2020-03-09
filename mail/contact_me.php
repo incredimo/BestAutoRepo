@@ -1,14 +1,6 @@
 <?php
 // Check for empty fields
-if(empty($_POST['name'])      ||
-   empty($_POST['email'])     ||
-   empty($_POST['phone'])     ||
-   empty($_POST['message'])   ||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-   echo "No arguments Provided!";
-   return false;
-   }
+
 //
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
@@ -17,8 +9,8 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 
 // Create the email and send the message
 // $to = 'yourname@yourdomain.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
- $email_subject = "NEW ENQUIRY FROM:  $name";
- $email_body = "You have received a new message from your website contact form.<br/>"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+$email_subject = "NEW ENQUIRY FROM:  $name";
+$email_body = "You have received a new message from your website contact form.<br/>"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
 // $headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 // $headers .= "Reply-To: $email_address";
 // mail($to,$email_subject,$email_body,$headers);
@@ -30,8 +22,8 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 
 
 /**
- * This example shows making an SMTP connection with authentication.
- */
+* This example shows making an SMTP connection with authentication.
+*/
 
 //SMTP needs accurate times, and the PHP time zone MUST be set
 //This should be done in your php.ini, but this is how to do it if you don't have access to that
@@ -79,11 +71,11 @@ $mail->AltBody = $email_body;
 
 //send the message, check for errors
 if (!$mail->send()) {
-echo "Mailer Error: " . $mail->ErrorInfo;
+    echo "Mailer Error: " . $mail->ErrorInfo;
     return true;
 } else {
     //echo "Mailer Error: " . $mail->ErrorInfo;
     return false;
-
+    
 }
 ?>
