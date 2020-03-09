@@ -35,12 +35,12 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 
 //SMTP needs accurate times, and the PHP time zone MUST be set
 //This should be done in your php.ini, but this is how to do it if you don't have access to that
-date_default_timezone_set('Etc/UTC');
+date_default_timezone_set('Europe/Amsterdam');
 
 require 'PHPMailerAutoload.php';
 
 //Create a new PHPMailer instance
-$mail = new PHPMailer;
+$mail = new PHPMailer();
 //Tell PHPMailer to use SMTP
 $mail->isSMTP();
 //Enable SMTP debugging
@@ -51,22 +51,22 @@ $mail->SMTPDebug = 2;
 //Ask for HTML-friendly debug output
 $mail->Debugoutput = 'html';
 //Set the hostname of the mail server
-$mail->Host = 'smtp.gmail.com';
+$mail->Host = 'xo.rs';
 //Set the SMTP port number - likely to be 25, 465 or 587
-$mail->SMTPSecure = 'tls';
-$mail->Port = 587;
+$mail->SMTPSecure = '';
+$mail->Port = 25;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
-$mail->Username = "bestautocustomer@gmail.com";
+$mail->Username = "customer@bestautoparts.ae";
 //Password to use for SMTP authentication
-$mail->Password = "dadsmagaav";
+$mail->Password = "B3st@ut0";
 //Set who the message is to be sent from
-$mail->setFrom('from@example.com', 'First Last');
+$mail->setFrom('customer@bestautoparts.ae', 'Customer Querry');
 //Set an alternative reply-to address
-$mail->addReplyTo('replyto@example.com', 'First Last');
+$mail->addReplyTo('customer@bestautoparts.ae', 'Customer Querry');
 //Set who the message is to be sent to
-$mail->addAddress('aghil.k.mohan@gmail.com', 'John Doe');
+$mail->addAddress('customer@bestautoparts.ae', 'Aghil');
 //Set the subject line
 $mail->Subject = $email_subject;
 //Read an HTML message body from an external file, convert referenced images to embedded,
@@ -79,7 +79,7 @@ $mail->AltBody = $email_body;
 
 //send the message, check for errors
 if (!$mail->send()) {
-//echo "Mailer Error: " . $mail->ErrorInfo;
+echo "Mailer Error: " . $mail->ErrorInfo;
     return true;
 } else {
     //echo "Mailer Error: " . $mail->ErrorInfo;
