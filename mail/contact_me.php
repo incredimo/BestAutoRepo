@@ -12,7 +12,14 @@ $carName = strip_tags(htmlspecialchars($_POST['CName']));
 // Create the email and send the message
 // $to = 'yourname@yourdomain.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_subject = "NEW ENQUIRY FROM:  $name";
-$email_body = "You have received a new message from your website contact form.<br/>"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+$email_body = "You have received a new message from your website contact form.<br/>"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message\n\nCar Brand:\n$carModel\n\nCarName:\n$carName";
+$htmlMessage=file_get_contents('template.html'); 
+$htmlMessage=str_replace('NAME GOES HERE', $name, $htmlMessage); 
+$htmlMessage=str_replace('EMAIL GOES HERE', $email_address, $htmlMessage); 
+$htmlMessage=str_replace('CONTACT NUMBER GOES HERE', $phone, $htmlMessage); 
+$htmlMessage=str_replace('FURTHER MESSAGE', $message, $htmlMessage); 
+$htmlMessage=str_replace('CAR BRAND GOES HERE', $carModel, $htmlMessage); 
+$htmlMessage=str_replace('CAR MODEL GOES HERE', $carName, $htmlMessage); 
 // $headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 // $headers .= "Reply-To: $email_address";
 // mail($to,$email_subject,$email_body,$headers);
@@ -54,18 +61,18 @@ $mail->SMTPAuth = true;
 //Username to use for SMTP authentication
 $mail->Username = "customer@bestautoparts.ae";
 //Password to use for SMTP authentication
-$mail->Password = "B3st@ut0";
+$mail->Password = "B3st@ut0P@rt5";
 //Set who the message is to be sent from
 $mail->setFrom('customer@bestautoparts.ae', 'Customer Querry');
 //Set an alternative reply-to address
 $mail->addReplyTo('customer@bestautoparts.ae', 'Customer Querry');
 //Set who the message is to be sent to
-$mail->addAddress('customer@bestautoparts.ae', 'Aghil');
+$mail->addAddress('sales@bestautoparts.ae', 'Sales');
 //Set the subject line
 $mail->Subject = $email_subject;
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-$mail->msgHTML($email_body);
+$mail->msgHTML($htmlMessage);
 //Replace the plain text body with one created manually
 $mail->AltBody = $email_body;
 //Attach an image file

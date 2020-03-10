@@ -1,4 +1,0 @@
-username
-customer@bestautoparts.ae
-password
-B3st@ut0
